@@ -1,0 +1,61 @@
+START
+DECLARE String nama, tlahir, jk, alamat, golongan, pilihan, Kamar
+DECLARE Integer umur, nomormedis, jmlkamar
+
+#Pendaftaran Pasien
+
+PRINT "Pasien Lama?(Ya/Tidak) "
+Input(pilihan)
+
+IF pilihan = "Ya" then
+    PRINT "Perawat Meminta Kartu KIB (Kartu Identitas Berobat) dan Admission Note"
+ELSE IF pilihan = "Tidak" then
+    PRINT "Perawat Meminta Biodata Pasien dan Admission Note"
+    PRINT "=====FORM BIODATA===="
+    PRINT "Nama : "
+    Input(nama)
+    PRINT "Tanggal Lahir : "
+    Input(tlahir)
+    PRINT "Umur : "
+    Input(umur)
+    PRINT "Jenis Kelamin : "
+    Input(jk)
+    PRINT "Alamat : "
+    Input(alamat)
+    PRINT "Golongan Darah : "
+    Input(golongan)
+    PRINT "Nomor Rekam Medis : "
+    Input(nomormedis)
+    PRINT "Kartu Identitas Berobat Dibuat!"
+ELSE
+    PRINT "Pilihan Tidak Tersedia!"
+END IF
+
+#Pemilihan Ruangan
+
+PRINT "Pilih Kelas Atau Kamar Rawat Inap (VIP/1/2/3) : "
+
+Switch (Kamar)
+    case VIP :
+        IF jmlkamar > 0 then
+            PRINT "ANTAR KE KAMAR"
+        ELSE
+            PRINT "KAMAR PENUH"
+    case 1 :
+        IF jmlkamar > 0 then
+             PRINT "ANTAR KE KAMAR"
+        ELSE
+            PRINT "KAMAR PENUH"
+    case 2 :
+        IF jmlkamar > 0 then
+            PRINT "ANTAR KE KAMAR"
+        ELSE
+            PRINT "KAMAR PENUH"
+    case 3 :
+        IF jmlkamar > 0 then
+            PRINT "ANTAR KE KAMAR"
+        ELSE
+            PRINT "KAMAR PENUH"
+    default :
+        PRINT "Kelas Kamar Tidak Tersedia"
+END
